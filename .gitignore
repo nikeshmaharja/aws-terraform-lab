@@ -1,0 +1,13 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# SSH keys
+*.pem
+
+# Editor files
+.idea/
+.vscode/
