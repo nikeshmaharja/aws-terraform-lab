@@ -18,5 +18,4 @@ Terraform configuration to manage a free-tier EC2 instance on AWS.
 terraform init
 terraform fmt
 terraform apply
-terraform fmt
 terraform destroy
