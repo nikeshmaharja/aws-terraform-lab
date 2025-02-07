@@ -18,4 +18,7 @@ Terraform configuration to manage a free-tier EC2 instance on AWS.
 terraform init
 terraform fmt
 terraform apply
+
+ssh -i .\aws-lab-key.pem ubuntu@$(terraform output -raw instance_public_ip)
+
 terraform destroy

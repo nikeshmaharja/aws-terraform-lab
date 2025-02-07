@@ -1,4 +1,4 @@
-
+# Creating an AWS key pair
 resource "aws_key_pair" "lab_key" {                                 
   key_name   = var.key_name
   public_key = tls_private_key.rsa.public_key_openssh
@@ -13,7 +13,7 @@ resource "tls_private_key" "rsa" {
 
 # Create an EC2 instance using the free-tier eligible t2.micro instance type
 resource "aws_instance" "free_tier_instance" {
-  ami           = "ami-0a290015b99140cd1"           # Ubuntu 24 (AMI) ID for the instance 
+  ami           = "ami-0a290015b99140cd1"           # Ubuntu 24 (AMI) ID for the instance  (AMI ID depends upon on the region so change accordingly)
   instance_type = "t2.micro"                        # Instance type (free-tier eligible)
   key_name      = aws_key_pair.lab_key.key_name     # Attach the SSH key pair to the instance
 
